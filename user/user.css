@@ -1,0 +1,345 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    padding-top: 0; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-bottom: 15px;
+}
+
+/* Top Contact Bar */
+.top-contact {
+    background-color: #165c22;
+    color: white;
+    text-align: right;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.contact-text i {
+    margin-right: 8px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfeff;
+    color: rgb(10, 10, 10);
+    padding: 15px 30px;
+}
+
+.nav-left img,
+.nav-right img {
+    height: 160px;
+}
+
+.nav-center {
+    text-align: center;
+    color: #080808;
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.dzongkha-text {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.highlight {
+    color: #0d0d0d;
+}
+
+/* Footer Section */
+footer {
+    background-color: #cbd6ed;
+    color: rgb(12, 12, 12);
+    padding: 50px 0;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li a {
+    color: #504d4d;
+    margin-bottom: 8px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffc107;
+}
+
+.footer-bottom {
+    background-color: #f2f4f5;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #207c0d;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-center {
+        margin-bottom: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+    }
+
+    /* Search Bar */
+    .search-bar {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #4a90e2;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .search-bar input:focus {
+        border-color: #4a90e2;
+    }
+
+/* Book card and image container styles */
+.book-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.book-category {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-image-container {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.book-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.book-card:hover .book-image-container img {
+    transform: scale(1.05);
+}
+
+.book-info {
+    padding: 15px;
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 2; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 50px;
+}
+
+.book-meta {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.meta-label {
+    font-weight: 600;
+    margin-right: 5px;
+    color: #666;
+}
+
+.availability-box {
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.available {
+    background-color: rgb(227, 253, 232);
+    color: rgb(13, 161, 57);
+    border: 1px solid #C7DB9C;
+}
+
+.not-available {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.availability-count {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    border: 1px solid #4a90e2;
+    border-radius: 4px;
+    color: #4a90e2;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* Search bar styles */
+.search-bar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+/* Books grid styling */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+
+}
